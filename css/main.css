@@ -1,0 +1,717 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #ccc;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+
+
+
+body {
+    background-repeat:  no-repeat;
+    background-position: center left;
+    background-attachment: fixed;
+    min-height: 100px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Montserrat;
+ }
+.indexText {
+    position: absolute;
+    top: 33%;
+    left: 7%;
+}
+h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+ h1 {
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 1.06;
+    text-align: left;
+    color: #ffffff;
+    margin: 10px 0;
+    text-align: center;
+}
+h2 {
+    height: auto;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.6;
+    letter-spacing: .9px;
+    text-align: left;
+    color: rgba(255, 255, 255);
+    text-align: center;
+}
+h4 {
+    margin-bottom: 40px;
+    height: auto;
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2;
+    letter-spacing: 2.8px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+h5 {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: 2.8px;
+    text-align: left;
+    color: #ffffff;
+    margin: 17px 0 5px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+h6 {
+    width: 83px;
+    height: 14px;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 2.8px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+  }
+p, label {
+    opacity: 0.6;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    height: auto;
+}
+.btn1, .btn2 {
+    font-size: 14px;
+    width: 47%;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 2.8px;
+}
+.btn1 { 
+    background-color: #663399;
+    margin-right:15px;
+}
+
+.btn2 {
+    border-color: white;
+    border: solid 2px #ffffff;
+}
+.btnContainer {
+    margin-top: 65px;
+}
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #f3f3f3;
+    display: block;
+    border-radius: 50px;
+    margin-right: 20px;
+    color:rgb(231, 231, 231);
+    line-height: 80px;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+#data {
+    display: inline-block;
+}
+i {
+    color: white;
+    font-size: 35px !important;
+    position: absolute;
+    top: 23.5%;
+    left: 11%;
+    z-index: 99;
+    -webkit-transition: top .5s; /* Safari */
+    transition: top .5s;
+    transition-timing-function: ease-out;
+}
+input[type=number], input[type=submit], input[type=text], select{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: white;
+  }
+input[type=number], select, input[type=text] {
+    width: 90%;
+    padding: 12px;
+    background-color:rgba(243, 243, 243, 0.1);
+    height: 10px;
+  }
+input[type=submit] {
+    width: 50%;
+    background-color:rgba(243, 243, 243, 0.5);
+    height: 35px;
+  }
+input[type=button], input[type=reset] {
+    background-color: #663399;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 10px;
+    width: 47%;
+}
+input[type=button] {
+    margin-right: 10px;
+}
+lable {
+    overflow: hidden;
+}
+L {
+    float: left;
+}
+.oneLine {
+    width: calc(100% / 4 - 50px);
+    display: inline-block;
+    clear:none;
+    margin: 0 20px;
+    vertical-align: top;
+}
+.projectBio {
+    margin-top: 80px;
+}
+.projectContainer {
+    width: 82.5%;
+    display: block;
+    margin: 100px auto;
+}
+.projectHeader {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+.projectInfo {
+    width: calc(100% / 3 - 65px);
+    display: inline-block;
+    margin: 30px;
+    vertical-align: text-top;
+}
+.projectText {
+    display: block;
+}
+.R {
+    float: right;
+}
+select {
+    border: none;
+}
+select::-ms-expand {
+    display: none;
+}
+textarea, select, input, button { 
+    margin: 5px 0 20px;
+    outline: none; 
+}
+
+#tool, #input, #select, #data {
+    margin-top: 30px;
+}
+[title~="text text text text"] {
+    margin-left: 100px;
+}
+
+#ui-datepicker-div {
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    color: #ccc;
+    margin-right: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+#ui-datepicker-div a {
+    color: #ccc;
+}
+.ui-datepicker-calendar, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+    margin: 10px;
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all a{
+    margin-right: 10px;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+.ui-helper-hidden-accessible div {
+    margin-left: 100px !important; 
+    display: block !important;
+    text-align:center !important;
+}
+title {
+    margin-left: 100px !important; 
+    display: block !important;
+    text-align:center !important;
+}
+fieldset {
+    border: 0;
+ }
+
+ .selectdiv {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+    width: 100%;
+    float: left;
+    margin: 25px 0 20px;
+  }
+  
+  .selectdiv:after {
+      content: '\f078';
+      font: normal normal normal 17px/1 FontAwesome;
+      color: rgba(243, 243, 243, 0.3);
+      right: 11px;
+      top: 1px;
+      height: 34px;
+      padding: 15px 0px 0px 8px;
+      position: absolute;
+      pointer-events: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  .selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px 0px;
+    padding: 0 12px;
+    font-size: 16px;
+    line-height: 1.75;   
+    background-color:rgba(243, 243, 243, 0.1);
+    border: 1px solid #ccc;
+    background-image: none;
+    -ms-word-break: normal;
+    word-break: normal;
+    border-radius: 10px;
+    color: rgba(243, 243, 243, 0.3);
+  }
+
+/* RECIPE TRACKER */
+
+.backgroundText {
+  font-family: 'Courgette', cursive;
+  font-size: 125px;
+  color: #f5f5f7; 
+  -webkit-transform: rotate(-90deg);/* Safari */
+  -moz-transform: rotate(-90deg);/* Firefox */
+  -ms-transform: rotate(-90deg);/* IE */
+  -o-transform: rotate(-90deg);/* Opera */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);/* Internet Explorer */
+  position: absolute;
+  left: -385px;
+  top: 320px;
+  z-index: -99;
+}
+
+.Sugar-Cookies {
+  height: 52px;
+  font-family: 'Courgette', cursive;
+  font-size: 47px;
+  text-align: left;
+  color: #ee6072;
+}
+.Total-Time-25-mins {
+  font-family: 'Courgette', cursive;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.94;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: #ffffff;
+  width: 175px;
+  border-radius: 5px;
+  background-color: #758ac2;
+  padding: 5px 0;
+  display: inline-block;
+}
+.padding {
+  margin: 200px;
+  margin-bottom: 0;
+  height: 455px;
+
+}
+.instructions {
+  width: 100%;
+  height: 400px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: rgba(145, 146, 148, 0.8);
+}
+.column:nth-of-type(2) {  margin: 0 0 0 60px;}
+.column {
+  width: 368px;
+  height: 500px;
+  display: inline-block;
+  vertical-align:top; 
+  margin-bottom: 100px;
+  overflow: scroll;
+}
+.list {
+  opacity: 0.8;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.94;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: rgba(145, 146, 148, 0.8);
+  margin: 40px 0;
+}
+tr:hover{ font-weight: 600; cursor: pointer;}
+
+.scroll { display: inline;/*position: absolute; left: 45%;bottom: 16%;*/}
+
+@media (max-width:990px) {
+    .projectInfo {width: calc(100% / 2 - 65px);}
+    .oneLine {width: calc(100% / 3 - 50px);}
+    i{top: 12.5%;}}
+
+
+@media (max-width:768px) {
+    .projectInfo {width: calc(100% / 1 - 65px);}
+    .oneLine {width: calc(100% / 2 - 50px);}}
+
+@media (max-width:520px) {
+    h1 {font-size: 42px;}
+    .btn1, .btn2 {
+        width: 100%;
+        margin: 0px auto 20px;}
+
+    .btn2 {margin: inherit 10px; }
+
+    .btnContainer {
+        margin: 65px auto;
+        width: 70%;}
+
+    .indexText {
+        position: absolute;
+        top: 23%;
+        left: 0%;
+        margin: 20px;}
+
+    .oneLine {width: calc(100% / 1 - 50px);}}
