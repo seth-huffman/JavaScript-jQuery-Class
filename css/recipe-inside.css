@@ -54,6 +54,7 @@ h5 {
     text-align: left;
     color: #ffffff;
     margin: 0;
+    display: inline-block;
   }
 h6 {
     font-family: Montserrat;
@@ -67,7 +68,7 @@ h6 {
     margin: 0;
     margin-bottom: 7px;
   }
-p {
+input, p, #half, #whole, #double {
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -77,6 +78,7 @@ p {
     text-align: left;
     color: #919294;
     cursor: pointer;
+    font-family: Playfair Display;
 }
 .container {
     width: 1130px;
@@ -155,3 +157,21 @@ button {
 
 .bold { font-weight: bold; }
 
+.fa-long-arrow-left {
+    color: white;
+    font-size: 35px !important;
+    position: absolute;
+    top: 2%;
+    left: 11%;
+    z-index: 99;
+    border: 0px;
+}
+input { border: 0; background-color: rgba(0,0,0,0)}
+
+#half, #whole, #double { 
+    border: 1px solid #919294;
+    border-radius: 10px;
+    padding: 0px 20px;
+    margin-right: 5px;
+
+}

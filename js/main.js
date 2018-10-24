@@ -1,3 +1,5 @@
+    
+    
     //DYNAMIC DROP DOWN FORM
     $('#test input:radio').change(function() {
         var selectedVal = $("#test input:radio:checked").val();
@@ -17,26 +19,138 @@
 
 
     //RECIPE INSIDER   
+     
+        $(document).ready(function () {
+ 
+
+            myJSON = JSON.stringify(json);
+            localStorage.setItem("testJSON", myJSON);
+
+            text = localStorage.getItem("testJSON");
+            obj = JSON.parse(text);
+            
+            
+            
+            var tr;
+            for (var i = 0; i < obj.length; i++) {
+                tr = $('<tr/>');
+                tr.append("<td>" + obj[i].Product + "</td>");
+                tr.append("<td>" + obj[i].Amount + "</td>");
+                tr.append("<td>" + obj[i].Measurement + "</td>");
+                $('table').append(tr);
+            }
+
+        });
+
+        $(document).ready(function(){
+            $("#half").click(function(){
+                $("tr").remove();
+
+                
+                
+                var tr;
+                for (var i = 0; i < obj.length; i++) {
+                    tr = $('<tr/>');
+                    tr.append("<td>" + obj[i].Product + "</td>");
+                    tr.append("<td>" + obj[i].Amount/2 + "</td>");
+                    tr.append("<td>" + obj[i].Measurement + "</td>");
+                    $('table').append(tr);
+                }
+    
+            });
+            });
+
+        $(document).ready(function(){
+            $("#whole").click(function(){
+                $("tr").remove();
+
+                
+                
+                var tr;
+                for (var i = 0; i < obj.length; i++) {
+                    tr = $('<tr/>');
+                    tr.append("<td>" + obj[i].Product + "</td>");
+                    tr.append("<td>" + obj[i].Amount + "</td>");
+                    tr.append("<td>" + obj[i].Measurement + "</td>");
+                    $('table').append(tr);
+                }
+    
+            });
+            });
+
+         $(document).ready(function(){
+            $("#double").click(function(){
+                $("tr").remove();
+
+                
+                
+                var tr;
+                for (var i = 0; i < obj.length; i++) {
+                    tr = $('<tr/>');
+                    tr.append("<td>" + obj[i].Product + "</td>");
+                    tr.append("<td id='fart'>" + obj[i].Amount*2 + "</td>");
+                    tr.append("<td>" + obj[i].Measurement + "</td>");
+                    $('table').append(tr);
+                }
+    
+            });
+            });
+
+
+        $(document).ready(function () {
+        var prep;
+        var cook;
+        var level;
+        var total;
+
+
+        for (var i = 0; i < main.length; i++) {
+            prep = $('#prep');
+            cook = $('#cook');
+            total = $('#total');
+            level = $('#level');
+            prep.append("<h5>" + main[i].Prep + "</h5>");
+            cook.append("<h5>" + main[i].Cook + "</h5>");
+            total.append("<h5>" + main[i].Total + "</h5>");
+            level.append("<h5>" + main[i].Difficulty + "</h5>");
+            $('.timeBox').append(h5);
+        }
+    });
+    $(document).ready(function () {
+    
+       
+        var p;
+        for (var i = 0; i < pgraph.length; i++) {
+            p = $('<p/>');
+            p.append("<p>" + pgraph[i].Paragraph + "</p>");
+            $('#instructions').append(p);
+        }
+    });
+
+
+
         $(document).ready(function(){
 
-        $("#button1").click(function(){
-            $("#ingredience").toggle();
+            $("#button1").click(function(){
+                $("#ingredience").toggle();
+                });
+            $("#button2").click(function(){
+                $("#instructions").toggle();
+                });
+            $('p').click(function(){
+                $(this).toggleClass("bold");
+                });
+            $('tr').click(function(){
+                $(this).toggleClass("bold");
+                });
             });
-        $("#button2").click(function(){
-            $("#instructions").toggle();
-            });
-        $('p').click(function(){
-            $(this).toggleClass("bold");
-            });
-        $('tr').click(function(){
-            $(this).toggleClass("bold");
-            });
-        });
+
+
 
 
     //JSON CREATE
     var JavaBook, x;
-        JavaBook = {"ISBN":"0-596-00016-2", "Title":"Java and XML", "Price":39.95, "Publisher":"O'Reilly and Associates", "Copyright":2000, "Comments":"Update required" };
+        JavaBook = {"ISBN":"0-596-00016-2", "Title":"Java and XML", "Price":39.95, "Publisher":"O'Reilly and Associates", /*"Authors":["FName":"Brett","LName":"McLaughlin","Price":22.00],*/ "Copyright":2000, "Comments":"Update required" };
         x = JSON.stringify(JavaBook);
          document.getElementById("first").innerHTML = x;
 

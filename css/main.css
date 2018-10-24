@@ -429,7 +429,7 @@ i {
     color: white;
     font-size: 35px !important;
     position: absolute;
-    top: 23.5%;
+    top: 180px;
     left: 11%;
     z-index: 99;
     -webkit-transition: top .5s; /* Safari */
@@ -686,10 +686,15 @@ tr:hover{ font-weight: 600; cursor: pointer;}
 
 .scroll { display: inline;/*position: absolute; left: 45%;bottom: 16%;*/}
 
+#valForm {width: 100%}
+
+#InputValForm {width: 94%}
+
 @media (max-width:990px) {
     .projectInfo {width: calc(100% / 2 - 65px);}
     .oneLine {width: calc(100% / 3 - 50px);}
-    i{top: 12.5%;}}
+    i { top: 95px !important;}}
+    #valForm {width: 100%}
 
 
 @media (max-width:768px) {

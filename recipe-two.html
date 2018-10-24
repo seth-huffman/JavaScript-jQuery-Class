@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="site.webmanifest" rel="manifest">
+	<link href="icon.png" rel="apple-touch-icon">
+	<link href="css/recipe-inside.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="js/main.js">
+	</script>
+	<script>
+        var main = [{"Title":"House Burger","Prep":"14","Cook":"16","Total":"30","Difficulty":"Easy"}];
+       
+    	var json = [{"Product":"Ground Beef","Amount":"1","Measurement":"Pound"},
+		{"Product":"Large Egg","Amount":"1","Measurement":"Egg"},
+		{"Product":"Onion","Amount":".5","Measurement":"Cup"},
+		{"Product":"Bread Crumbs","Amount":".25","Measurement":"Cup"},
+		{"Product":"Worcestershire","Amount":"1","Measurement":"Tablepoon"},
+		{"Product":"Garlic Cloves","Amount":"1","Measurement":"Cloves"},
+		{"Product":"Salt","Amount":".5","Measurement":"Teaspoon"},
+		{"Product":"Pepper","Amount":".25","Measurement":"Teaspoon"},
+		{"Product":"Hamburger Buns","Amount":"4","Measurement":"Buns"},
+		{"Product":"Mayonnaise","Amount":".25","Measurement":"Cup"},
+		{"Product":"Ketchup","Amount":".25","Measurement":"Cup"},
+		{"Product":"Iceberg Lettuce","Amount":"4","Measurement":"Leaves"},
+		{"Product":"Tomato","Amount":"1","Measurement":"Tomato"},
+		{"Product":"Red Onion","Amount":"4","Measurement":"Slices"},
+		{"Product":"Serving Amount","Amount":"4","Measurement":" "}];
+
+		var pgraph = [{"Paragraph":"In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, salt, and pepper until well blended. Divide mixture into equal portions and shape each into a patty about 4 inches wide."},
+		{"Paragraph":"Lay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill."},
+		{"Paragraph":"Lay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute."},
+		{"Paragraph":"Spread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place."},];
+	
+	</script>
+
+</head>
+<body background="img/backgroundImage-two.jpg" title="Computer on Chair">
+	<a href="recipe.html"><i class="fa fa-long-arrow-left"></i></a>
+	<h3>Recipe Tracker</h3>
+	<div class="container">
+		<div class="inline">
+			<h1>House Burger</h1>
+		</div>
+		<div class="inline timecontainer">
+			<div class="timeBox">
+				<h6>Prep Time</h6>
+				<h5 id="prep"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Cook Time</h6>
+				<h5 id="cook"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Total Time</h6>
+				<h5 id="total"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Difficulty</h6>
+				<h5 id="level"></h5> 
+			</div>
+		</div>
+		<div class="whiteBox">
+			<div class="inline verticalAlign">
+				<h2>Ingredience</h2><button id="button1"><i class="arrow down"></i></button>
+				<table id="ingredience"></table>
+				<div id="ingredience">
+				<button onclick="halfMyFunction()" id="half">Half</button>
+				<button onclick="MyFunction()" id="whole">Whole</button>
+                <button onclick="doubleMyFunction()" id="double">Double</button>
+				</div>
+			</div>
+			<div class="inline margin instruct">
+				<h2>Instructions</h2><button id="button2"><i class="arrow down"></i>
+				<p></p></button>
+				<div id="instructions"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
