@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<title></title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="site.webmanifest" rel="manifest">
+	<link href="icon.png" rel="apple-touch-icon"><!-- Place favicon.ico in the root directory -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/script-FormVal.js">
+	</script>
+</head>
+<body background="img/background-inner.jpg" title="Computer on Chair">
+	<a href="wdv321Homework.htm"><i class="fa fa-long-arrow-left"></i></a>
+	<div class="projectContainer">
+		<h4>Assignment</h4>
+		<h2>Form Validation - Complaint Form</h2>
+		<div class="projectBio">
+			<div class="projectInfo">
+				<div class="projectHeader">
+					<div class="projectText">
+						<h5>Task One</h5>
+						<h6></h6>
+					</div>
+				</div>
+				<form action="" id="form1" method="post" name="form1">
+					<p><label for="custName">Name:</label> <input id="custName" name="custName" type="text"> <span class="errorMsg" id="custNameError"></span></p>
+					<p><label for="custPhone">Phone:</label> <input id="custPhone" name="custPhone" type="text"> <span class="errorMsg" id="custPhoneError"></span> </p>
+					<p><label for="enterEmail">Email:</label> <input id="enterEmail" name="enterEmail" type="text"> <span class="errorMsg" id="enterEmailError"></span></p>
+					<p>Select Products:</p><span class="errorMsg" id="radioButtonError"></span>
+					<p><label><input id="custProducts" name="custProducts" type="radio" value="books"> Movies</label><br>
+					<label><input id="custProducts" name="custProducts" type="radio" value="movies"> Books</label><br>
+					<label><input id="custProducts" name="custProducts" type="radio" value="electronics"> Electronics</label><br>
+					<label><input id="custProducts" name="custProducts" type="radio" value="computer"> Other</label><br></p>
+					<p>Description problem:</p>
+					<p><label for="custComplaint"></label> 
+					<textarea cols="45" id="custComplaint" maxlength="120" name="custComplaint" rows="5"></textarea> <span class="errorMsg" id="custComplaintError"></span></p>
+					<p><input id="sendForm" name="button" type="button" value="Submit">
+					<input id="button2" name="button2" type="reset" value="Clear"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

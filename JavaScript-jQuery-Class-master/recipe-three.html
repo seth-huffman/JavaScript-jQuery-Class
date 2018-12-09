@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta content="ie=edge" http-equiv="x-ua-compatible">
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="site.webmanifest" rel="manifest">
+	<link href="icon.png" rel="apple-touch-icon">
+	<link href="css/recipe-inside.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	    var main = [{"Title":"Ranger Cookies","Prep":"10","Cook":"12","Total":"22","Difficulty":"Easy"}];
+       
+    	var json = [{"Product":"Shortening","Amount":"1","Measurement":"Cup"},
+		{"Product":"Brown Sugar","Amount":"1","Measurement":"Cup"},
+		{"Product":"Sugar","Amount":"1","Measurement":"Cup"},
+		{"Product":"Egg","Amount":"2","Measurement":"Egg"},
+		{"Product":"Vanilla Extract","Amount":"1","Measurement":"Teaspoon"},
+		{"Product":"Flour","Amount":"2","Measurement":"Cup"},
+		{"Product":"Baking Powder","Amount":".5","Measurement":"Teaspoon"},
+		{"Product":"Baking Soda","Amount":"1","Measurement":"Teaspoon"},
+		{"Product":"Salt","Amount":".5","Measurement":"Teaspoon"},
+		{"Product":"Oatmeal","Amount":"2","Measurement":"Cup"},
+		{"Product":"Cornflakes","Amount":"2","Measurement":"Cup"},
+		{"Product":"Coconut","Amount":"1","Measurement":"Cup"},
+		{"Product":"Serving Amount","Amount":"3","Measurement":"Bakers Dozen"}];
+	
+		var pgraph = [{"Paragraph":"Cream shortening and sugar, add eggs. Sift dry ingredients and add to first mixture. Fold in coconut Next add oatmeal and cornflakes. Mix in vanilla and Bake at 350 for 12 minutes"},];
+     
+	
+	</script>
+
+</head>
+<body background="img/backgroundImage-three.jpg" title="Computer on Chair">
+	<a href="recipe.html"><i class="fa fa-long-arrow-left"></i></a>
+	<h3>Recipe Tracker</h3>
+	<div class="container">
+		<div class="inline">
+			<h1>Ranger Cookies</h1>
+		</div>
+		<div class="inline timecontainer">
+			<div class="timeBox">
+				<h6>Prep Time</h6>
+				<h5 id="prep"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Cook Time</h6>
+				<h5 id="cook"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Total Time</h6>
+				<h5 id="total"></h5> <h5>min</h5>
+			</div>
+			<div class="timeBox">
+				<h6>Difficulty</h6>
+				<h5 id="level"></h5> 
+			</div>
+		</div>
+		<div class="whiteBox">
+			<div class="inline verticalAlign">
+				<h2>Ingredience</h2><button id="button1"><i class="arrow down"></i></button>
+				<table id="ingredience"></table>
+				<div id="ingredience">
+				<button onclick="halfMyFunction()" id="half">Half</button>
+				<button onclick="MyFunction()" id="whole">Whole</button>
+                <button onclick="doubleMyFunction()" id="double">Double</button>
+				</div>
+			</div>
+			<div class="inline margin instruct">
+				<h2>Instructions</h2><button id="button2"><i class="arrow down"></i>
+				<p></p></button>
+				<div id="instructions"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
